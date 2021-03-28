@@ -27,9 +27,9 @@ class Pokemon {
         this.sprites,
         this.stats,
         this.types,
-        this.weight,
+        this.weight
     });
-
+    List<int> colorsRGB;
     List<Ability> abilities;
     int baseExperience;
     List<Species> forms;

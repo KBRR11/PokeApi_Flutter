@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   provider: ^4.3.3
   dio: ^3.0.10
+  color_thief_flutter: ^1.0.2
 
 dev_dependencies:
   flutter_test:

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex_app/pages/home_page.dart';
+import 'package:pokedex_app/pages/loading_page.dart';
+import 'package:pokedex_app/pages/thiefcolor.dart';
 import 'package:pokedex_app/services/poke_service.dart';
 import 'package:provider/provider.dart';
  
@@ -15,9 +17,11 @@ class MyApp extends StatelessWidget {
           child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Pokédex App',
-        initialRoute: 'home',
+        initialRoute: 'loading',
         routes: {
-          'home':(_) => HomePage() 
+          'home'   : (_) => HomePage(),
+          'loading': (_) => LoadingPage(), 
+          'thief': (_) => ThiefColorTest(), 
         },
       ),
     );

@@ -48,7 +48,7 @@ class _ContenidoPokemon extends StatelessWidget {
                     width: double.infinity,
                     height: double.infinity,
                     decoration: BoxDecoration(
-                        color: Colors.yellow,//TODO: cambiar por thiefcolor
+                        color: Color.fromRGBO(pokemon.colorsRGB[0], pokemon.colorsRGB[1], pokemon.colorsRGB[2], 1),
                         borderRadius: BorderRadius.all(Radius.circular(10))),
                   ),
                   _pokeball(),
@@ -105,8 +105,6 @@ class _ContenidoPokemon extends StatelessWidget {
   }
 }
 
-class _name {
-}
 
 class _PonerTitulo extends StatelessWidget {
   @override
