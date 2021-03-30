@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+//import 'package:pokedex_app/helpers/helper.dart';
 import 'package:pokedex_app/models/pokemon_model.dart';
+//import 'package:pokedex_app/pages/info_page.dart';
 import 'package:pokedex_app/services/poke_service.dart';
 import 'package:provider/provider.dart';
 
@@ -40,7 +42,10 @@ class _ContenidoPokemon extends StatelessWidget {
             return GestureDetector(
               onTap: ()async{
               //final pokemonService = Provider.of<PokeService>(context, listen: false);
-               //pokemonService.fetchPokemon();
+              // print(pokemon.name);
+              //navegarFadeIn(context, InfoPage());
+              
+              Navigator.pushNamed(context, 'info', arguments: pokemon);
               },
               child: Stack(
                 children: [
@@ -68,7 +73,8 @@ class _ContenidoPokemon extends StatelessWidget {
           child: Container(
         width: 110,
         height: 110,
-        child: Image(image: NetworkImage(pokemon.sprites.other.officialArtwork.frontDefault)),
+        child: Hero(tag: '${pokemon.name}',
+        child: Image(image: NetworkImage(pokemon.sprites.other.officialArtwork.frontDefault))),
       ),
     );
   }
